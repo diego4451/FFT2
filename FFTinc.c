@@ -28,6 +28,9 @@ section. data
 section. text
       
       mov rbx, [n]         ; rbx =n 
+      ;division 
+      mov ax, [n]  ;dividendo 
+      
       
       mov 
       mul bl               ;ax = al * bl,los registros al y ax son implícitos,al como fuente y ax de destino.
