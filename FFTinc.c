@@ -1,14 +1,18 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-/*fft(n,m,x,y) */
+/*fft(n,m,x,y)*/
 int main()
 {
 int n,m;             /*n-Cantidad de puntos -- m-log2n etapas */
+/*double x[8],y[8];*/
 int i,j,k,n1,n2;
 double c,s,e,a,t1,t2;
-/*EStos son los datos a ingresar*/    
+
+/*EStos son los datos a ingresar*/
+
 n =8;
 m=3;
 double x[8]={1,2,3,4,4,3,2,1};
@@ -70,10 +74,18 @@ y[k] = y[k] + t2;
 }
 }
 
+printf("FFT para: ");
 printf("%d",n);
-printf("%f", x[0]);
+printf(" puntos\n");
+printf("X[k]={");
+for (i=0; i<n; i++)
+{
+printf("%f", x[i]);
+printf(" + ");
+printf("%f", y[i]);
+printf("j\n");
+}
 
 return 0; 
 }
 
-;Fin
