@@ -8,35 +8,11 @@ int main()
 int n,m;             /*n-Cantidad de puntos -- m-log2n etapas */
 int i,j,k,n1,n2;
 double c,s,e,a,t1,t2;
+/*EStos son los datos a ingresar*/    
 n =8;
 m=3;
 double x[8]={1,2,3,4,4,3,2,1};
 double y[8]={0,0,0,0,0,0,0,0};
-
-section. data
-    n equ 8
-    m equ 3
-    vector1 db 1,2,3,4   ;db vector formado por 8 valores de tipo byte
-    vector2 db 0,0,0,0
-
- section. bss
-    i resb 1  ;reserva 1 byte
-    j resb 1
-    k resb 1
-    n1 resb 1
- 
-section. text
-      
-      mov rbx, [n]         ; rbx =n 
-      
-      mov 
-      mul bl               ;ax = al * bl,los registros al y ax son implícitos,al como fuente y ax de destino.
-      mov rax [vec+rsi]    ; mueve ek vakir de la posicion del vector ver indicada por rsi
-                           es el operando fuentes, en rax, rax es el operando destino
-      add rax, 4           ; rax=rax+4
-      ret                  ; retorno de subrutina 
-/*EStos son los datos a ingresar*/
-
 
 /* bit-reverse */
 j = 0; 
