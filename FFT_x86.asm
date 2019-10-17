@@ -9,7 +9,7 @@ default rel
 global _start: 
 
 extern __stack_chk_fail                                 ; near
-extern _printf                                           ; near
+extern printf                                           ; near
 extern sin                                              ; near
 extern cos                                              ; near
 extern _GLOBAL_OFFSET_TABLE_                            ; byte
@@ -230,37 +230,37 @@ _start:   ; Function begin
         mov     esi, eax                                ; 04A0 _ 89. C6
         lea     rdi, [rel ?_013]                        ; 04A2 _ 48: 8D. 3D, 00000000(rel)
         mov     eax, 0                                  ; 04A9 _ B8, 00000000
-        call    _printf                                  ; 04AE _ E8, 00000000(PLT r)
+        call    printf                                  ; 04AE _ E8, 00000000(PLT r)
         mov     rax, qword [rbp-90H]                    ; 04B3 _ 48: 8B. 85, FFFFFF70
         mov     qword [rbp-0E8H], rax                   ; 04BA _ 48: 89. 85, FFFFFF18
         movsd   xmm0, qword [rbp-0E8H]                  ; 04C1 _ F2: 0F 10. 85, FFFFFF18
         lea     rdi, [rel ?_014]                        ; 04C9 _ 48: 8D. 3D, 00000000(rel)
         mov     eax, 1                                  ; 04D0 _ B8, 00000001
-        call    _printf                                  ; 04D5 _ E8, 00000000(PLT r)
+        call    printf                                  ; 04D5 _ E8, 00000000(PLT r)
         mov     rax, qword [rbp-88H]                    ; 04DA _ 48: 8B. 85, FFFFFF78
         mov     qword [rbp-0E8H], rax                   ; 04E1 _ 48: 89. 85, FFFFFF18
         movsd   xmm0, qword [rbp-0E8H]                  ; 04E8 _ F2: 0F 10. 85, FFFFFF18
         lea     rdi, [rel ?_014]                        ; 04F0 _ 48: 8D. 3D, 00000000(rel)
         mov     eax, 1                                  ; 04F7 _ B8, 00000001
-        call    _printf                                  ; 04FC _ E8, 00000000(PLT r)
+        call    printf                                  ; 04FC _ E8, 00000000(PLT r)
         mov     rax, qword [rbp-48H]                    ; 0501 _ 48: 8B. 45, B8
         mov     qword [rbp-0E8H], rax                   ; 0505 _ 48: 89. 85, FFFFFF18
         movsd   xmm0, qword [rbp-0E8H]                  ; 050C _ F2: 0F 10. 85, FFFFFF18
         lea     rdi, [rel ?_014]                        ; 0514 _ 48: 8D. 3D, 00000000(rel)
         mov     eax, 1                                  ; 051B _ B8, 00000001
-        call    _printf                                  ; 0520 _ E8, 00000000(PLT r)
+        call    printf                                  ; 0520 _ E8, 00000000(PLT r)
         mov     rax, qword [rbp-80H]                    ; 0525 _ 48: 8B. 45, 80
         mov     qword [rbp-0E8H], rax                   ; 0529 _ 48: 89. 85, FFFFFF18
         movsd   xmm0, qword [rbp-0E8H]                  ; 0530 _ F2: 0F 10. 85, FFFFFF18
         lea     rdi, [rel ?_014]                        ; 0538 _ 48: 8D. 3D, 00000000(rel)
         mov     eax, 1                                  ; 053F _ B8, 00000001
-        call    _printf                                  ; 0544 _ E8, 00000000(PLT r)
+        call    printf                                  ; 0544 _ E8, 00000000(PLT r)
         mov     rax, qword [rbp-78H]                    ; 0549 _ 48: 8B. 45, 88
         mov     qword [rbp-0E8H], rax                   ; 054D _ 48: 89. 85, FFFFFF18
         movsd   xmm0, qword [rbp-0E8H]                  ; 0554 _ F2: 0F 10. 85, FFFFFF18
         lea     rdi, [rel ?_014]                        ; 055C _ 48: 8D. 3D, 00000000(rel)
         mov     eax, 1                                  ; 0563 _ B8, 00000001
-        call    _printf                                  ; 0568 _ E8, 00000000(PLT r)
+        call    printf                                  ; 0568 _ E8, 00000000(PLT r)
         mov     eax, 0                                  ; 056D _ B8, 00000000
         mov     rcx, qword [rbp-8H]                     ; 0572 _ 48: 8B. 4D, F8
 ; Note: Address is not rip-relative
