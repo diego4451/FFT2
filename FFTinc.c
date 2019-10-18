@@ -13,10 +13,23 @@ double c,s,e,a,t1,t2;
 
 /*EStos son los datos a ingresar*/
 
-n =8;
-m=3;
-double x[8]={1,2,3,4,4,3,2,1};
-double y[8]={0,0,0,0,0,0,0,0};
+printf("FFT: Indique la cantidad de puntos ");
+scanf("%d",&n);
+m=log2(n);
+
+double x[n];
+double y[n];
+
+printf("FFT:Indique la parte real de los puntos\n (uno a la vez, presione enter)\n");
+for (i=0; i<n; i++)
+  scanf("%lf",&x[i]);
+
+printf("FFT:Indique la parte imaginaria de los puntos\n (uno a la vez, presione enter)\n");
+for (i=0; i<n; i++)
+  scanf("%lf", &y[i]);
+
+/*x[n]={};*/
+//;double y[n]={0,2,0,2}*/
 
 /* bit-reverse */
 j = 0; 
@@ -88,4 +101,5 @@ printf("j\n");
 
 return 0; 
 }
+
 
