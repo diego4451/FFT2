@@ -1,12 +1,8 @@
-; Disassembly of file: fftlibro.o
-; Wed Oct 16 18:14:27 2019
-; Mode: 64 bits
-; Syntax: YASM/NASM
-; Instruction set: SSE2, x64
+
 
 default rel
 
-global _start: 
+global main: 
 
 extern __stack_chk_fail                                 ; near
 extern printf                                           ; near
@@ -17,7 +13,7 @@ extern _GLOBAL_OFFSET_TABLE_                            ; byte
 
 SECTION .text  ;align=1 execute                           section number 1, code
 
-_start:   ; Function begin
+main:   ; Function begin
         push    rbp                                     ; 0000 _ 55
         mov     rbp, rsp                                ; 0001 _ 48: 89. E5
         sub     rsp, 240                                ; 0004 _ 48: 81. EC, 000000F0
@@ -270,7 +266,7 @@ _start:   ; Function begin
         call    __stack_chk_fail                        ; 0581 _ E8, 00000000(PLT r)
 ?_012:  leave                                           ; 0586 _ C9
         ret                                             ; 0587 _ C3
-; _start End of function
+; main End of function
 
 
 SECTION .data   ;align=1 noexecute                        section number 2, data
